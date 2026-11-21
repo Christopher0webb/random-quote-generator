@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Random Quote Generator</title>
+<style>
+body{font-family:Georgia;background:#f5f3ff;padding:30px;text-align:center}
+main{max-width:600px;margin:50px auto;background:white;padding:35px;border-radius:18px}
+#quote{font-size:25px;color:#6d28d9;line-height:1.6;margin:30px 0}
+button{background:#7c3aed;color:white;padding:13px 22px;border:0;border-radius:8px;cursor:pointer}
+</style>
+</head>
+<body>
+<main>
+<h1>Daily Inspiration</h1>
+<p>Discover a little motivation every day.</p>
+<div id="quote"></div>
+<button onclick="generate()">New Quote</button>
+</main>
+<script>
+const quotes=[
+ "Small steps create meaningful progress.",
+ "Stay curious and keep learning.",
+ "Every challenge brings a new opportunity.",
+ "Consistency turns effort into achievement.",
+ "Focus on progress rather than perfection.",
+ "Build today what you want to see tomorrow.",
+ "Good habits begin with simple decisions.",
+ "Keep moving forward at your own pace."
+];
+let current=-1;
+function generate(){
+ current=(current+1+Math.floor(Math.random()*(quotes.length-1)))%quotes.length;
+ document.getElementById("quote").textContent=quotes[current];
+}
+generate();
+</script>
+</body>
+</html>
