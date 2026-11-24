@@ -18,3 +18,12 @@ inspirational quotes.
 ### Development Notes
 Keep the quote collection organized
 and maintain readable text formatting.
+## Manual Testing Checklist
+
+- [ ] Generate multiple quotes using the main button.
+- [ ] Verify that quote text remains readable on mobile.
+- [ ] Check that the quote collection displays without errors.
+
+### Test Notes
+
+Record the observed result and any reproducible issue after running the tests.
